@@ -38,7 +38,7 @@ public class TimeExpertServer {
 
     private ServletContextHandler staticContentHandler() {
         ServletContextHandler handler = new ServletContextHandler();
-        handler.setContextPath("/static");
+        handler.setContextPath("/");
         handler.addServlet(new ServletHolder(new DefaultServlet()), "/*");
         handler.setResourceBase("src/main/webapp");
         handler.setClassLoader(Thread.currentThread().getContextClassLoader());
@@ -74,7 +74,7 @@ public class TimeExpertServer {
 
         RewriteRegexRule reverse = new RewriteRegexRule();
 //        reverse.setRegex("/static/([^.])+$");
-        reverse.setRegex("/static/([^.])+$");
+        reverse.setRegex("/([^.])+$");
         reverse.setReplacement("/index.html");
         rewrite.addRule(reverse);
 
