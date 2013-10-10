@@ -1,1 +1,9 @@
 <p>This is the partial for view 1.</p>
+
+<ul id="navcontainer">
+    <li ng-repeat="app in apps"><a href="#app{{app.name}}">{{app.name}}</a></li>
+</ul>
+
+<div ng-repeat="app in apps">
+    <p id="app{{app.name}}">{{app.name}}</p>
+</div>
