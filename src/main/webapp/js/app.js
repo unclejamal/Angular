@@ -12,6 +12,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
 
 myApp.config(['$locationProvider', function($locationProvider) {
         $locationProvider
-                .html5Mode(true)
-                .hashPrefix('!');
+                .html5Mode(true);
+        //.hashPrefix('!');
+                
     }]);
